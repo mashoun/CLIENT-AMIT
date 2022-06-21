@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>AMIT</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/amit-icon.jpg" rel="icon">
+  <link href="assets/img/amit-icon.jpg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script src="https://unpkg.com/vue@3"></script>
+
+</head>
+
+<body id="appp">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1><a href="index.html">Flexor</a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="index.html"><img src="assets/img/amit.jpeg" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#printing">Printing</a></li>
+          <li><a class="nav-link scrollto " href="#products">Our Products</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
+          <!-- <li><a href="blog.html">Blog</a></li> -->
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+          <li>
+            <a href="#contact">
+              <div class="getstarted">Contact</div>
+            </a>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container" data-aos="fade-in">
+      <h1>Welcome to AMIT</h1>
+      <h2>{{profile.bio}}</h2>
+
+
+      <!-- <div class="d-flex align-items-center">
+        <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      </div> -->
+    </div>
+    <div v-if="spinner" class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-4 col-lg-5" data-aos="fade-up">
+            <div class="content">
+              <h3>Why Choose AMIT ?</h3>
+              <p>
+                Known by our customers for our work ethic, professionalism and innovative approach, we strive to achieve
+                excellence. By emphasizing our product quality and employing fast, efficient service, we are able to
+                give you the best product possible at an affordable price.
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-8 col-lg-7 d-flex">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bi bi-award"></i>
+                    <h4>Professionalism</h4>
+                    <p>A guiding principle in all our work</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bi bi-person-check"></i>
+                    <h4>Customer Satisfaction</h4>
+                    <p>Satisfaction and loyalty are the most important elements of a good business</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bi bi-stars"></i>
+                    <h4>Innovation</h4>
+                    <p>Fast-changing environment requires new ways of thinking, new skills and attitudes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+    <hr>
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2 class="mb-5">Our Partners and Clients</h2>
+
+        <div v-if="spinner" class="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div v-for="c in profile.clients" class="swiper-slide"><img :src="c.url" class="img-fluid" :alt="c.name">
+            </div>
+          </div>
+          <br><br>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative"
+            data-aos="fade-right">
+            <a :href="profile.videoUrl" class="glightbox play-btn mb-4"></a>
+          </div>
+
+          <div
+            class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h4 data-aos="fade-up">About us</h4>
+            <h3 data-aos="fade-up">Who we are</h3>
+            <p data-aos="fade-up">{{profile.whoWeAre}}</p>
+
+            <div class="icon-box" data-aos="fade-up">
+              <div class="icon"><i class="bi bi-check2-all"></i></div>
+              <h4 class="title"><a href="">Services</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                occaecati cupiditate non provident</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Misssion</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                praesentium voluptatum deleniti atque</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-atom"></i></div>
+              <h4 class="title"><a href="">Vission</a></h4>
+              <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut
+                deserunt minus aut eligendi omnis</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
+      <div class="container">
+
+        <div class="row d-flex justify-content-around">
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-hourglass"></i>
+              <div class="purecounter-pot">
+                <span data-purecounter-start="0" data-purecounter-end="2019" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <!-- <span> K +</span> -->
+              </div>
+              <p>Operating scince</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-globe2"></i>
+              <div class="purecounter-pot">
+                <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <span>+</span>
+              </div>
+              <p>Countries</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-boxes"></i>
+              <div class="purecounter-pot">
+                <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1"
+                  class="purecounter"></span>
+                <span> K +</span>
+              </div>
+              <p>Boxes per year</p>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Printing Section ======= -->
+    <section id="printing" class="values">
+
+      <div class="section-title container" data-aos="fade-up">
+        <h2 class="mb-5">Printing Magic</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quos doloremque delectus incidunt consequuntur,
+          ratione sequi in eveniet quaerat! Ratione suscipit tenetur fugit recusandae temporibus voluptates blanditiis
+          aperiam enim architecto!</p>
+
+        <div v-if="spinner" class="lds-ellipsis">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="card-container">
+
+        <!-- <div v-for="pr in profile.printing" class="card">
+          <img :src="pr.url" style="width:100%;">
+          <div class="card-body">
+            <h3>{{pr.title}}</h3>
+            <p>{{pr.info}}</p>
+          </div>
+        </div> -->
+
+        <div v-if="tab1" v-for="pr in profile.printing" :key="pr" class="product-box">
+          <img :src="pr.url" alt="" >
+          <div class="text-container">
+            <div class="text-pot">
+              <h4>{{pr.title}}</h4>
+              <!-- Button trigger modal -->
+              <button type="button" class="modal-btn" data-toggle="modal" :data-target="`#${pr.id}`">
+                <i class="bi bi-arrows-angle-expand"></i>
+
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" :id="pr.id" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+
+                      <img :src="pr.url" alt="" class="modal-img">
+                      <h5 class="modal-title" id="exampleModalLongTitle">{{pr.title}}</h5>
+                      <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                        <!-- <i class="bi bi-arrow-right"></i> -->
+                        <i class="bi bi-arrows-angle-contract"></i>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <h4>{{pr.info}}</h4>
+                      <!-- <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste dolores praesentium labore? Illum corrupti voluptates ea nostrum tempore et nobis quidem nesciunt cum inventore ex, modi placeat perferendis illo!</h4> -->
+                    </div>
+                    <!-- <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      </div>
+    </section><!-- End Values Section -->
+
+
+    <hr>
+    <!-- ======= Portfolio Section ======= -->
+    <section id="products" class="portfolio">
+
+      <div class="container">
+        <div class="section-title">
+          <h2 data-aos="fade-up">Our Products</h2>
+          <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
+            quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+            ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+
+          <div v-if="spinner" class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Control buttons -->
+      <div class="btn-control-box">
+        <button @click="tabAll">All</button>
+        <button @click="tab1 = true; tab3 = false; tab2 = false;">Printing</button>
+        <button @click="tab2 = true; tab1 = false; tab3 = false;">Rolling Papers</button>
+        <button @click="tab3 = true; tab2 = false; tab1 = false;">Packaging</button>
+      </div>
+
+      <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+      <section class="products-container">
+
+        <div v-if="tab1" v-for="print in printing" :key="print" class="product-box">
+          <img :src="print.url" alt="" class="scale-in-center">
+          <div class="text-container">
+            <div class="text-pot">
+              <h4>{{print.title}}</h4>
+              <!-- Button trigger modal -->
+              <button type="button" class="modal-btn" data-toggle="modal" :data-target="`#${print.id}`">
+                <i class="bi bi-arrows-angle-expand"></i>
+
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" :id="print.id" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+
+                      <img :src="print.url" alt="" class="modal-img">
+                      <h5 class="modal-title" id="exampleModalLongTitle">{{print.title}}</h5>
+                      <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                        <!-- <i class="bi bi-arrow-right"></i> -->
+                        <i class="bi bi-arrows-angle-contract"></i>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <h4>{{print.info}}</h4>
+                      <!-- <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste dolores praesentium labore? Illum corrupti voluptates ea nostrum tempore et nobis quidem nesciunt cum inventore ex, modi placeat perferendis illo!</h4> -->
+                    </div>
+                    <!-- <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div v-if="tab3" v-for="pack in packaging" :key="pack" class="product-box">
+          <img :src="pack.url" alt="" class="scale-in-center">
+          <div class="text-container">
+            <div class="text-pot">
+              <h4>{{pack.title}}</h4>
+              <!-- Button trigger modal -->
+              <button type="button" class="modal-btn" data-toggle="modal" :data-target="`#${pack.id}`">
+                <i class="bi bi-arrows-angle-expand"></i>
+
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" :id="pack.id" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+
+                      <img :src="pack.url" alt="" class="modal-img">
+                      <h5 class="modal-title" id="exampleModalLongTitle">{{pack.title}}</h5>
+                      <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                        <!-- <i class="bi bi-arrow-right"></i> -->
+                        <i class="bi bi-arrows-angle-contract"></i>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <h4>{{pack.info}}</h4>
+                      <!-- <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste dolores praesentium labore? Illum corrupti voluptates ea nostrum tempore et nobis quidem nesciunt cum inventore ex, modi placeat perferendis illo!</h4> -->
+                    </div>
+                    <!-- <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div v-if="tab2" v-for="roll in rollingPapers" :key="roll" class="product-box">
+          <img :src="roll.url" alt="" class="scale-in-center">
+          <div class="text-container">
+            <div class="text-pot">
+              <h4>{{roll.title}}</h4>
+              <!-- Button trigger modal -->
+              <button type="button" class="modal-btn" data-toggle="modal" :data-target="`#${roll.id}`">
+                <i class="bi bi-arrows-angle-expand"></i>
+
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" :id="roll.id" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+
+                      <img :src="roll.url" alt="" class="modal-img">
+                      <h5 class="modal-title" id="exampleModalLongTitle">{{roll.title}}</h5>
+                      <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                        <!-- <i class="bi bi-arrow-right"></i> -->
+                        <i class="bi bi-arrows-angle-contract"></i>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <h4>{{roll.info}}</h4>
+                      <!-- <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste dolores praesentium labore? Illum corrupti voluptates ea nostrum tempore et nobis quidem nesciunt cum inventore ex, modi placeat perferendis illo!</h4> -->
+                    </div>
+                    <!-- <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- <div class="product-box">
+          <img src="https://picsum.photos/200" alt="" >
+          <h1>Title</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quo.</p>
+        </div> -->
+      </section>
+
+
+    </section><!-- End Portfolio Section -->
+
+    <hr>
+
+
+    <!-- ======= Quality Section ======= -->
+
+    <section class="quality-box">
+      <div class="section-title">
+        <h2 data-aos="fade-up">Quality</h2>
+        <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
+          quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+          ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      </div>
+      <div class="quality-card">
+        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
+
+        <h4>Lorem, ipsum dolor.</h4>
+      </div>
+      <div class="quality-card">
+        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
+
+        <h4>Lorem, ipsum dolor.</h4>
+      </div>
+      <div class="quality-card">
+        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
+        <h4>Lorem, ipsum dolor.</h4>
+      </div>
+      <div class="quality-card">
+        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
+        <h4>Lorem, ipsum dolor.</h4>
+      </div>
+      <div class="quality-card">
+        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
+        <h4>Lorem, ipsum dolor.</h4>
+      </div>
+      <div class="quality-card">
+        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
+        <h4>Lorem, ipsum dolor.</h4>
+      </div>
+
+    </section>
+    <!-- End Quality Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-up">Team</h2>
+          <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
+            quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+            ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+
+          <div v-if="spinner" class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div v-for="t in profile.team" :key="t" class="col-lg-3 col-md-6 d-flex align-items-stretch"
+            data-aos="fade-up">
+            <div class="member">
+              <div class="member-img">
+                <img :src="t.url" class="img-fluid" alt="">
+                <!-- <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div> -->
+              </div>
+              <div class="member-info">
+                <h4>{{t.name}}</h4>
+                <span> {{t.jobTitle}} </span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+      <hr>
+    </section><!-- End Team Section -->
+
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq section-bg">
+
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-up">F.A.Q</h2>
+          <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
+            quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+            ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+
+          <div v-if="spinner" class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+
+            <li v-for="f in profile.faq" data-aos="fade-up" :data-aos-delay="`${f.index * 100}`">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" :data-bs-target="`#${f.id}`"
+                class="collapsed">
+                {{f.question}}
+                <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div :id="f.id" class="collapse" data-bs-parent=".faq-list">
+                <p> {{f.answer}} </p>
+              </div>
+            </li>
+
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End F.A.Q Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 data-aos="fade-up">Contact</h2>
+
+          <div v-if="spinner" class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <!-- <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
+            quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
+            ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+        </div>
+
+        <div class="row justify-content-center">
+
+          <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up">
+            <div class="info-box">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>{{profile.address1}} | {{profile.address2}}</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="info-box">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>{{profile.email1}}<br>{{profile.email2}}</p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="info-box">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>{{profile.number1}}<br>{{profile.number2}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-xl-9 col-lg-12 mt-4">
+            <form class="php-email-form">
+              <div class="row">
+                <!-- <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div> -->
+              </div>
+              <div class="form-group mt-3">
+                <input v-model="subject" type="text" class="form-control" name="subject" id="subject"
+                  placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea v-model="body" class="form-control" name="message" rows="5" placeholder="Message"
+                  required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center">
+
+                <a class="send-msg"
+                  :href="`mailto:no-one@snai1mai1.com?subject=${encode(subject)}&body=${encode(body)}`">Send
+                  Message</a>
+
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>AMIT</h3>
+            <p>
+              Zalka<br>
+              Lebanon <br><br>
+              <strong>Phone:</strong> {{profile.number1}}<br>
+              <strong>Email:</strong> {{profile.email1}}<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#products">Products</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#printing">Printing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#products">Packaging</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#products">Rolling Papers</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form>
+              <input v-model="newsletter" type="email" name="email">
+              <input @click="postNews" type="button" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-lg-flex py-4">
+
+      <div class="me-lg-auto text-center text-lg-start">
+        <div class="credits">Powered by <a href="https://lebancode.com/">Lebancode.com</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/js/vue.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>

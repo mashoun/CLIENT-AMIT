@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Server</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body id="app">
+    <h3>AMIT | Admin Control System</h3>
+    <hr>
+    <div class="text-editor">
+
+        <textarea id="text-editor"></textarea>
+        <button>Save</button>
+    </div>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            methods: {
+                checkTab(tab) {
+                    return tab == this.tab
+                }
+            },
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    tab: 'Select a Tab',
+                    words: ['abc', 'efg', 'hij'],
+                    images: ["https://drive.google.com/uc?export=view&id=1lZLez8jZybP3mQkOSVww6aVaHA3JzPDz", "https://drive.google.com/uc?export=view&id=1EHDV7X7A1iG9yRiMN4lrp25_SirgMUt-", "https://drive.google.com/uc?export=view&id=1ArCBlG9KFo_woxuUXlQLnJ1mdG_SyET-", "https://drive.google.com/uc?export=view&id=11sc-_xL9AojIXumMQxUf2y8MuYZTx7VF"]
+
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>
