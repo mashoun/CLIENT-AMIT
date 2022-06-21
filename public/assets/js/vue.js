@@ -16,8 +16,8 @@ createApp({
             printing: '',
             rollingPapers: '',
             packaging: '',
-            api2: 'https://script.google.com/macros/s/AKfycbx5JolRUyxD6qzlPbNL6lRKnuX7CdpNzNyB-A4VslNYsO4REFscDmx3QL88ckWvjHKpXA/exec',
-            api: 'https://script.google.com/macros/s/AKfycbxE7GupR4KNVvJfoDeL8xWWC_WuN_uwQB6wNri2F8p1Kn-UCXIYku4-LQSTq4z0kmzNLQ/exec'
+            api:'https://script.google.com/macros/s/AKfycbyeMtRt5OpkzjZ3o_xzghYojx9LuXYJxa6cA9JFrxSJuci9NpaFnGYCJUr_rqrFyZ3S/exec',
+            api2: 'https://script.google.com/macros/s/AKfycbx5JolRUyxD6qzlPbNL6lRKnuX7CdpNzNyB-A4VslNYsO4REFscDmx3QL88ckWvjHKpXA/exec'
 
         }
     },

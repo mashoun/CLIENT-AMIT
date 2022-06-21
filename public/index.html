@@ -532,32 +532,13 @@
           quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
           ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
       </div>
-      <div class="quality-card">
-        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
+      <div v-for="q in profile.quality" class="quality-card">
+        <div class="quality-pot"><img :src="q.url"></div>
 
-        <h4>Lorem, ipsum dolor.</h4>
+        <h4>{{q.name}}</h4>
       </div>
-      <div class="quality-card">
-        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
 
-        <h4>Lorem, ipsum dolor.</h4>
-      </div>
-      <div class="quality-card">
-        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
-        <h4>Lorem, ipsum dolor.</h4>
-      </div>
-      <div class="quality-card">
-        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
-        <h4>Lorem, ipsum dolor.</h4>
-      </div>
-      <div class="quality-card">
-        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
-        <h4>Lorem, ipsum dolor.</h4>
-      </div>
-      <div class="quality-card">
-        <div class="quality-pot"><img src="../public/assets/img/ce.png"></div>
-        <h4>Lorem, ipsum dolor.</h4>
-      </div>
+     
 
     </section>
     <!-- End Quality Section -->
@@ -719,7 +700,7 @@
               <div class="text-center">
 
                 <a class="send-msg"
-                  :href="`mailto:no-one@snai1mai1.com?subject=${encode(subject)}&body=${encode(body)}`">Send
+                  :href="`mailto:${profile.email1}?subject=${encode(subject)}&body=${encode(message)}`">Send
                   Message</a>
 
               </div>
