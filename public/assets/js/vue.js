@@ -12,11 +12,13 @@ createApp({
             newsletter:'',
             tab2: true,
             tab3: true,
+            tab4:true,
             profile: '',
             printing: '',
+            laze:'',
             rollingPapers: '',
             packaging: '',
-            api:'https://script.google.com/macros/s/AKfycbztjSy8hZzRfB4d7zn2WhAowduHKVc5dQoUtemzcslkOc2qETOm15AggU7p8aleH4zE5w/exec',
+            api:'https://script.google.com/macros/s/AKfycbzCsON9C9ivSOcQ7ONjLxwCCNZJ1a-cQX2GOsFfCloOTYKuqGxEmhyL_ybI58pmweHMbQ/exec',
             api2: 'https://script.google.com/macros/s/AKfycbx5JolRUyxD6qzlPbNL6lRKnuX7CdpNzNyB-A4VslNYsO4REFscDmx3QL88ckWvjHKpXA/exec'
 
         }
@@ -40,6 +42,7 @@ createApp({
             this.tab1 = true;
             this.tab2 = true;
             this.tab3 = true;
+            this.tab4 = true;
         }
     },
     mounted() {
@@ -50,6 +53,7 @@ createApp({
             this.printing = res.products.printing
             this.rollingPapers = res.products.rollingPapers
             this.packaging = res.products.packaging
+            this.laze = res.products.laze
 
             console.log(this.packaging)
             this.spinner = false
