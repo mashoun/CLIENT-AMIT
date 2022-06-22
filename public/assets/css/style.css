@@ -406,7 +406,7 @@ hr {
   width: 100%;
   height: 60vh;
   /* background: url("../img/hero-bg.jpg") center center; */
-  background: url("../img/food-packaging-design.jpg") center center;
+  /* background: url("../img/food-packaging-design.jpg") center center; */
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -742,7 +742,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about-img.jpg") center center no-repeat;
+  
   background-size: cover;
   min-height: 500px;
 }
@@ -916,11 +916,19 @@ section {
 }
 
 .quality-box>.quality-card>.quality-pot>img {
-  width: 80%;
+  width: 100%;
   object-fit: cover;
 }
 
-@media (max-width:800px) {}
+@media (max-width:475px) {
+  .quality-card{
+    width: 100px;
+    height: 120px;
+  }
+  .quality-card>h4{
+    font-size: 1rem;
+  }
+}
 
 
 
@@ -1205,9 +1213,15 @@ section {
   letter-spacing: 2px;
   outline: none;
   border: none;
-  background-color: #edf2fb;
-  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1);
-  border-radius: .5rem;
+  color: aliceblue;
+  background-color: #003049;
+  /* box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1); */
+  border-radius: 50px;
+}
+
+.btn-control-box>button:hover{
+  
+  background-color: #002f49ec;
 }
 
 .products-container {

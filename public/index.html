@@ -94,7 +94,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" :style="`background: url(${profile.wallpaper1}) center center;`">
     <div class="container" data-aos="fade-in">
       <h1>Welcome to AMIT</h1>
       <h2>{{profile.bio}}</h2>
@@ -129,7 +129,7 @@
                 give you the best product possible at an affordable price.
               </p>
               <div class="text-center">
-                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                <a href="#about" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div>
@@ -200,8 +200,9 @@
 
         <div class="row">
           <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative"
-            data-aos="fade-right">
-            <a :href="profile.videoUrl" class="glightbox play-btn mb-4"></a>
+            data-aos="fade-right"
+            :style="`background: url(${profile.wallpaper2}) center center no-repeat;`">
+            <!-- <a :href="profile.videoUrl" class="glightbox play-btn mb-4"></a> -->
           </div>
 
           <div
@@ -313,7 +314,7 @@
         </div> -->
 
         <div v-if="tab1" v-for="pr in profile.printing" :key="pr" class="product-box">
-          <img :src="pr.url" alt="" >
+          <img :src="pr.url" alt="">
           <div class="text-container">
             <div class="text-pot">
               <h4>{{pr.title}}</h4>
@@ -538,7 +539,7 @@
         <h4>{{q.name}}</h4>
       </div>
 
-     
+
 
     </section>
     <!-- End Quality Section -->
@@ -772,11 +773,11 @@
         </div>
       </div>
       <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> -->
+        <a :href="profile.facebook" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+        <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+        <a :href="profile.linkedin" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
   </footer><!-- End Footer -->

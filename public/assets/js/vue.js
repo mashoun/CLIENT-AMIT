@@ -16,7 +16,7 @@ createApp({
             printing: '',
             rollingPapers: '',
             packaging: '',
-            api:'https://script.google.com/macros/s/AKfycbyeMtRt5OpkzjZ3o_xzghYojx9LuXYJxa6cA9JFrxSJuci9NpaFnGYCJUr_rqrFyZ3S/exec',
+            api:'https://script.google.com/macros/s/AKfycbztjSy8hZzRfB4d7zn2WhAowduHKVc5dQoUtemzcslkOc2qETOm15AggU7p8aleH4zE5w/exec',
             api2: 'https://script.google.com/macros/s/AKfycbx5JolRUyxD6qzlPbNL6lRKnuX7CdpNzNyB-A4VslNYsO4REFscDmx3QL88ckWvjHKpXA/exec'
 
         }
@@ -33,7 +33,7 @@ createApp({
                 },
                 body: this.newsletter
             }).then(res => res.json()).then(res => {
-                alert(res)
+                alert('Thank You !')
             })
         },
         tabAll() {
