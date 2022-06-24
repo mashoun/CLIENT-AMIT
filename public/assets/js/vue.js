@@ -1,6 +1,6 @@
 const { createApp } = Vue
 
-createApp({
+var app = createApp({
     data() {
         return {
             spinner: false,
@@ -18,8 +18,10 @@ createApp({
             laze:'',
             rollingPapers: '',
             packaging: '',
+            products:['PRODUCT1','PRODUCT2','PRODUCT3','PRODUCT4',],
             api:'https://script.google.com/macros/s/AKfycbzCsON9C9ivSOcQ7ONjLxwCCNZJ1a-cQX2GOsFfCloOTYKuqGxEmhyL_ybI58pmweHMbQ/exec',
-            api2: 'https://script.google.com/macros/s/AKfycbx5JolRUyxD6qzlPbNL6lRKnuX7CdpNzNyB-A4VslNYsO4REFscDmx3QL88ckWvjHKpXA/exec'
+            api2: 'https://script.google.com/macros/s/AKfycbx5JolRUyxD6qzlPbNL6lRKnuX7CdpNzNyB-A4VslNYsO4REFscDmx3QL88ckWvjHKpXA/exec',
+           
 
         }
     },
@@ -59,4 +61,32 @@ createApp({
             this.spinner = false
         })
     }
-}).mount('#appp')
+})
+
+app.component('pot1',{
+    template:
+    /*html*/
+    `
+    <h1>hello {{name}} </h1>
+    `,
+    data(){
+        return{
+            name:'pot1'
+        }
+    }
+})
+app.component('pot2',{
+    template:
+    /*html*/
+    `
+    <h1>hello {{name}} </h1>
+    `,
+    data(){
+        return{
+            name:'pot2'
+        }
+    }
+})
+
+
+app.mount('#appp')

@@ -289,9 +289,9 @@
 
       <div class="section-title container" data-aos="fade-up">
         <h2 class="mb-5">Printing Magic</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quos doloremque delectus incidunt consequuntur,
-          ratione sequi in eveniet quaerat! Ratione suscipit tenetur fugit recusandae temporibus voluptates blanditiis
-          aperiam enim architecto!</p>
+        <p>Our biggest edge over the competition is top-quality packaging which we deliver through different high end
+          printing techniques found below. Glow in the dark, hot and cold foil, and many other techniques allow us to
+          deploy a highly demanded product by the end user due to its durability and appealing design.</p>
 
         <div v-if="spinner" class="lds-ellipsis">
           <div></div>
@@ -357,6 +357,7 @@
 
 
     <hr>
+
     <!-- ======= Portfolio Section ======= -->
     <section id="products" class="portfolio">
 
@@ -377,7 +378,7 @@
         <button @click="tabAll">All</button>
         <button @click="tab1 = true; tab3 = false; tab2 = false;tab4 = false;"><i class="bi bi-hash"></i>ALPH</button>
         <button @click="tab2 = true; tab1 = false; tab3 = false;tab4 = false;"><i class="bi bi-hash"></i>ASH</button>
-        <button @click="tab3 = true; tab2 = false; tab1 = false;tab4 = false;"><i class="bi bi-hash"></i>Sour</button>
+        <button @click="tab3 = true; tab2 = false; tab1 = false;tab4 = false;"><i class="bi bi-hash"></i>SOUR</button>
         <button @click="tab4 = true; tab2 = false; tab1 = false;tab3 = false;"><i class="bi bi-hash"></i>LAZE</button>
       </div>
 
@@ -557,6 +558,7 @@
 
     </section><!-- End Portfolio Section -->
 
+
     <hr>
 
 
@@ -565,9 +567,9 @@
     <section class="quality-box">
       <div class="section-title">
         <h2 data-aos="fade-up">Quality</h2>
-        <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
-          quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-          ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p data-aos="fade-up">AMIT would never compromise on product quality, especially when it’s related to the
+          customer’s rolling experience. Our products follow international rules and regulations for rolling papers,
+          where we ensure the user’s safety and the products sustainability.</p>
       </div>
       <div v-for="q in profile.quality" class="quality-card">
         <div class="quality-pot"><img :src="q.url"></div>
@@ -586,9 +588,8 @@
 
         <div class="section-title">
           <h2 data-aos="fade-up">Team</h2>
-          <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
-            quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-            ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p data-aos="fade-up">Driven by the power of youth, our company is managed by a highly skilled group of young
+            entrepreneurs who aim to step on the global stage of the industry</p>
 
           <div v-if="spinner" class="lds-ellipsis">
             <div></div>
@@ -634,9 +635,8 @@
 
         <div class="section-title">
           <h2 data-aos="fade-up">F.A.Q</h2>
-          <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
-            quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-            ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p data-aos="fade-up">We’re here to answer any question you might have. If the questions below are not what
+            you’re looking for, scroll down and send us an email.</p>
 
           <div v-if="spinner" class="lds-ellipsis">
             <div></div>
@@ -791,7 +791,7 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>Subscribe below so we can update you on our latest activities.</p>
             <form>
               <input v-model="newsletter" type="email" name="email">
               <input @click="postNews" type="button" value="Subscribe">

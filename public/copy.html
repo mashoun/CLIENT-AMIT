@@ -1,0 +1,159 @@
+<div v-if="tab1" v-for="print in printing" :key="print" class="product-box">
+    <img :src="print.url" alt="" class="scale-in-center">
+    <div class="text-container">
+        <div class="text-pot">
+            <h4>{{print.title}}</h4>
+            <!-- Button trigger modal -->
+            <button type="button" class="modal-btn" data-toggle="modal" :data-target="`#${print.id}`">
+                <i class="bi bi-arrows-angle-expand"></i>
+
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" :id="print.id" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+
+                            <img :src="print.url" alt="" class="modal-img">
+                            <h5 class="modal-title" id="exampleModalLongTitle">{{print.title}}</h5>
+                            <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                <!-- <i class="bi bi-arrow-right"></i> -->
+                                <i class="bi bi-arrows-angle-contract"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>{{print.info}}</h4>
+                            <!-- <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste dolores praesentium labore? Illum corrupti voluptates ea nostrum tempore et nobis quidem nesciunt cum inventore ex, modi placeat perferendis illo!</h4> -->
+                        </div>
+                        <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div v-if="tab3" v-for="pack in packaging" :key="pack" class="product-box">
+    <img :src="pack.url" alt="" class="scale-in-center">
+    <div class="text-container">
+        <div class="text-pot">
+            <h4>{{pack.title}}</h4>
+            <!-- Button trigger modal -->
+            <button type="button" class="modal-btn" data-toggle="modal" :data-target="`#${pack.id}`">
+                <i class="bi bi-arrows-angle-expand"></i>
+
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" :id="pack.id" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+
+                            <img :src="pack.url" alt="" class="modal-img">
+                            <h5 class="modal-title" id="exampleModalLongTitle">{{pack.title}}</h5>
+                            <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                <!-- <i class="bi bi-arrow-right"></i> -->
+                                <i class="bi bi-arrows-angle-contract"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>{{pack.info}}</h4>
+                            <!-- <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste dolores praesentium labore? Illum corrupti voluptates ea nostrum tempore et nobis quidem nesciunt cum inventore ex, modi placeat perferendis illo!</h4> -->
+                        </div>
+                        <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div v-if="tab2" v-for="roll in rollingPapers" :key="roll" class="product-box">
+    <img :src="roll.url" alt="" class="scale-in-center">
+    <div class="text-container">
+        <div class="text-pot">
+            <h4>{{roll.title}}</h4>
+            <!-- Button trigger modal -->
+            <button type="button" class="modal-btn" data-toggle="modal" :data-target="`#${roll.id}`">
+                <i class="bi bi-arrows-angle-expand"></i>
+
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" :id="roll.id" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+
+                            <img :src="roll.url" alt="" class="modal-img">
+                            <h5 class="modal-title" id="exampleModalLongTitle">{{roll.title}}</h5>
+                            <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                <!-- <i class="bi bi-arrow-right"></i> -->
+                                <i class="bi bi-arrows-angle-contract"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>{{roll.info}}</h4>
+                            <!-- <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste dolores praesentium labore? Illum corrupti voluptates ea nostrum tempore et nobis quidem nesciunt cum inventore ex, modi placeat perferendis illo!</h4> -->
+                        </div>
+                        <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- LAZE -->
+<div v-if="tab4" v-for="lz in laze" :key="lz" class="product-box">
+    <img :src="lz.url" alt="" class="scale-in-center">
+    <div class="text-container">
+        <div class="text-pot">
+            <h4>{{lz.title}}</h4>
+            <!-- Button trigger modal -->
+            <button type="button" class="modal-btn" data-toggle="modal" :data-target="`#${lz.id}`">
+                <i class="bi bi-arrows-angle-expand"></i>
+
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" :id="lz.id" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+
+                            <img :src="lz.url" alt="" class="modal-img">
+                            <h5 class="modal-title" id="exampleModalLongTitle">{{lz.title}}</h5>
+                            <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                                <!-- <i class="bi bi-arrow-right"></i> -->
+                                <i class="bi bi-arrows-angle-contract"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>{{lz.info}}</h4>
+                            <!-- <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste dolores praesentium labore? Illum corrupti voluptates ea nostrum tempore et nobis quidem nesciunt cum inventore ex, modi placeat perferendis illo!</h4> -->
+                        </div>
+                        <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
