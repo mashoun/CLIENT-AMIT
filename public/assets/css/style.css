@@ -1213,15 +1213,35 @@ section {
   letter-spacing: 2px;
   outline: none;
   border: none;
-  color: aliceblue;
-  background-color: #003049;
-  /* box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.1); */
-  border-radius: 50px;
+  color: #313030;
+  
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  /* color: aliceblue; */
+  /* background-color: #003049; */
+  border-radius: .2rem;
+  background-color: #edf2fb
+  
+  
+}
+
+.bi-hash{
+  /* color: #FDD819; */
+  color: #0d3b66;
+}
+
+.active{
+  
+  border-bottom-style: solid;
+  border-bottom-color: rgb(255, 88, 33);
+  
 }
 
 .btn-control-box>button:hover{
   
-  background-color: #002f49ec;
+  border-bottom-style: solid;
+  /* border-bottom-color: #4facfe; */
+  border-bottom-color: rgb(255, 88, 33);
 }
 
 .products-container {
@@ -1282,6 +1302,7 @@ section {
   width: 50%;
   text-align: left;
 }
+
 
 /*--------------------------------------------------------------
 # Team
@@ -1880,10 +1901,6 @@ section {
   }
 }
 
-
-.bi-hash{
-  color: #FDD819;
-}
 
 
 /*--------------------------------------------------------------
