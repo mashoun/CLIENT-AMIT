@@ -379,11 +379,12 @@
         <button @click="tab2 = true; tab1 = false; tab3 = false;tab4 = false;"><i class="bi bi-hash"></i>ASH</button>
         <button @click="tab3 = true; tab2 = false; tab1 = false;tab4 = false;"><i class="bi bi-hash"></i>SOUR</button>
         <button @click="tab4 = true; tab2 = false; tab1 = false;tab3 = false;"><i class="bi bi-hash"></i>LAZE</button> -->
-        
-        <button :class="p" v-for="p in profile.tabs" :key="p" @click="setCurrentTab(p)" ><i class="bi bi-hash"></i>{{p}}</button>
+
+        <button :class="p" v-for="p in profile.tabs" :key="p" @click="setCurrentTab(p)"><i
+            class="bi bi-hash"></i>{{p}}</button>
       </div>
 
-      <product :plist="currentList" ></product>
+      <product :plist="currentList"></product>
 
 
     </section><!-- End Portfolio Section -->
@@ -488,13 +489,30 @@
               </div>
             </li>
 
-
           </ul>
+          
         </div>
 
       </div>
     </section><!-- End F.A.Q Section -->
 
+    
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>Call To Action</h3>
+         
+          <p>{{profile.ctaText}}</p>
+         
+          <a class="cta-btn" :href="profile.ctaLink">Join Us</a>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Cta Section -->
+<hr>
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
@@ -551,12 +569,17 @@
                 </div> -->
               </div>
               <div class="form-group mt-3">
-                <input v-model="subject" type="text" class="form-control" name="subject" id="subject"
-                  placeholder="Subject" required>
+                <!-- <input v-model="subject" type="text" class="form-control" name="subject" id="subject"
+                  placeholder="Subject" required> -->
+                <h6>Select Subject :</h6>
+                <select class="form-select" aria-label="Default select example" v-model="subject" id="subject" >
+                  <!-- <option selected>Select A Subject</option> -->
+                  <option v-for="s in profile.subjects" :value="s">{{s}}</option>
+                </select>
               </div>
               <div class="form-group mt-3">
-                <textarea v-model="body" class="form-control" name="message" rows="5" placeholder="Message"
-                  required></textarea>
+                <h6>Enter Message :</h6>
+                <textarea v-model="message" class="form-control" name="message" rows="5" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -571,7 +594,6 @@
 
               </div>
             </form>
-
           </div>
 
         </div>
@@ -612,9 +634,9 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#printing">Printing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#products">Packaging</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#products">Rolling Papers</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#printing">Printing Magic</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#team">Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#faq">FAQ</a></li>
             </ul>
           </div>
 
