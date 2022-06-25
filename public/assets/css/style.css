@@ -2110,3 +2110,17 @@ section {
 
   /* border: 2px solid var(--blue); */
 }
+
+
+
+@media (max-width:1000px) {
+ .LB-footer{
+  display: flex;
+  /* justify-content: space-around;
+  align-items: center; */
+  flex-direction: column-reverse;
+ } 
+ .LB-footer>div{
+  margin: .5rem;
+ }
+}
