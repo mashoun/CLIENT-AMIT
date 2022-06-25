@@ -1222,7 +1222,7 @@ section {
   border-bottom-color: transparent;
   /* color: aliceblue; */
   /* background-color: #003049; */
-  border-radius: .2rem;
+  border-radius: .3rem;
   background-color: #edf2fb
 }
 
@@ -1238,6 +1238,13 @@ section {
   /* border-bottom-color: #4facfe; */
   border-bottom-color: rgb(255, 88, 33);
 }
+.btn-control-box>button:focus{
+  
+  border-bottom-style: solid;
+  /* border-bottom-color: #4facfe; */
+  border-bottom-color: rgb(255, 88, 33);
+}
+
 
 .products-container {
   width: 90%;

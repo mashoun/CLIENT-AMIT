@@ -286,3 +286,4 @@
 // FILTER DIV 
 
 // Add active class to the current button (highlight it)
+document.getElementById('btn-all').focus()
