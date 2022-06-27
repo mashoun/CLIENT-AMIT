@@ -3,11 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0,user-scalable=0" name="viewport">
 
   <title>AMIT</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta
+    content="Rolling papers manufacturing company that produces high end products with unique and exceptional designs"
+    name="description">
+  <meta
+    content="Rolling papers producer of bleached, unbleached and organic hemp. Packaging uses hot and cold foil, glow in the dark ink, and spot uv,AMIT"
+    name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/amit-icon.jpg" rel="icon">
@@ -38,7 +42,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 
 </head>
 
@@ -82,7 +86,7 @@
           </li> -->
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
           <li>
-            <a href="#contact">
+            <a href="#contact" class="nav-link scrollto">
               <div class="getstarted">Contact</div>
             </a>
           </li>
@@ -213,19 +217,19 @@
 
             <div class="icon-box" data-aos="fade-up">
               <div class="icon"><i class="bi bi-check2-all"></i></div>
-              <h4 class="title"><a href="">Services</a></h4>
+              <h4 class="title">Services</h4>
               <p class="description">{{profile.services}}</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bx bx-gift"></i></div>
-              <h4 class="title"><a href="">Misssion</a></h4>
+              <h4 class="title">Mission</h4>
               <p class="description">{{profile.mission}}</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <h4 class="title"><a href="">Vission</a></h4>
+              <h4 class="title">Vision</h4>
               <p class="description">{{profile.vission}}</p>
             </div>
 
@@ -311,12 +315,12 @@
         </div> -->
 
         <div v-for="pr in profile.printingMagic" :key="pr" class="product-box">
-          <img :src="pr.url" alt="">
+          <img :src="pr.url" :alt="pr.title">
           <div class="text-container">
             <div class="text-pot">
               <h4>{{pr.title}}</h4>
               <!-- Button trigger modal -->
-              <button type="button" class="modal-btn" data-toggle="modal" :data-target="`#${pr.id}`">
+              <button :name="pr.title" type="button" class="modal-btn" data-toggle="modal" :data-target="`#${pr.id}`">
                 <i class="bi bi-arrows-angle-expand"></i>
 
               </button>
@@ -329,7 +333,8 @@
 
                       <img :src="pr.url" alt="" class="modal-img">
                       <h5 class="modal-title" id="exampleModalLongTitle">{{pr.title}}</h5>
-                      <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                      <button :name="pr.title" type="button" class="close close-btn" data-dismiss="modal"
+                        aria-label="Close">
                         <!-- <i class="bi bi-arrow-right"></i> -->
                         <i class="bi bi-arrows-angle-contract"></i>
                       </button>
@@ -374,13 +379,13 @@
 
       <!-- Control buttons -->
       <div class="btn-control-box" id="btncontrolbox">
-        <button @click="getAllProducts" id="btn-all">All</button>
+        <button name="ALL" @click="getAllProducts" id="btn-all">All</button>
         <!-- <button @click="tab1 = true; tab3 = false; tab2 = false;tab4 = false;"><i class="bi bi-hash"></i>ALPH</button>
         <button @click="tab2 = true; tab1 = false; tab3 = false;tab4 = false;"><i class="bi bi-hash"></i>ASH</button>
         <button @click="tab3 = true; tab2 = false; tab1 = false;tab4 = false;"><i class="bi bi-hash"></i>SOUR</button>
         <button @click="tab4 = true; tab2 = false; tab1 = false;tab3 = false;"><i class="bi bi-hash"></i>LAZE</button> -->
 
-        <button :class="p" v-for="p in profile.tabs" :key="p" @click="setCurrentTab(p)"><i
+        <button :class="p" v-for="p in profile.tabs" :name="p" :key="p" @click="setCurrentTab(p)"><i
             class="bi bi-hash"></i>{{p}}</button>
       </div>
 
@@ -402,7 +407,7 @@
           where we ensure the user’s safety and the products sustainability.</p>
       </div>
       <div v-for="q in profile.quality" class="quality-card">
-        <div class="quality-pot"><img :src="q.url"></div>
+        <div class="quality-pot"><img :src="q.url" :alt="q.name"></div>
 
         <h4>{{q.name}}</h4>
       </div>
@@ -435,7 +440,7 @@
             data-aos="fade-up">
             <div class="member">
               <div class="member-img">
-                <img :src="t.url" class="img-fluid" alt="">
+                <img :src="t.url" class="img-fluid" :alt="t.name">
                 <!-- <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
@@ -480,45 +485,47 @@
           <ul>
 
             <li v-for="f in profile.faq" data-aos="fade-up" :data-aos-delay="`${f.index * 100}`">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" :data-bs-target="`#${f.id}`"
-                class="collapsed">
+              <i class="bx bx-help-circle icon-help"></i>
+              <h1 data-bs-toggle="collapse" :data-bs-target="`#${f.id}`" class="collapsed">
                 {{f.question}}
-                <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
+              </h1>
               <div :id="f.id" class="collapse" data-bs-parent=".faq-list">
                 <p> {{f.answer}} </p>
               </div>
             </li>
 
           </ul>
-          
+
         </div>
 
       </div>
     </section><!-- End F.A.Q Section -->
 
-    
+
     <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
+    <!-- <section id="cta" class="cta">
       <div class="container" data-aos="zoom-in">
 
         <div class="text-center">
-          <h3>Call To Action</h3>
+          <h3>Intrested ?</h3>
          
-          <p>{{profile.ctaText}}</p>
+          <p>send us an email of your request below , our team will be in touch the soonest !</p>
          
-          <a class="cta-btn" :href="profile.ctaLink">Join Us</a>
         </div>
 
       </div>
-    </section>
+    </section> -->
     <!-- End Cta Section -->
-<hr>
+    <hr>
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
-          <h2 data-aos="fade-up">Contact</h2>
+          <h2 data-aos="fade-up">Intrested ?</h2>
+          <p data-aos="fade-up">Contact us with an email of your request below , our team will be in touch the soonest !
+          </p>
 
           <div v-if="spinner" class="lds-ellipsis">
             <div></div>
@@ -557,7 +564,9 @@
           </div>
         </div>
 
+
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
+
           <div class="col-xl-9 col-lg-12 mt-4">
             <form class="php-email-form">
               <div class="row">
@@ -567,24 +576,28 @@
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div> -->
+
               </div>
               <div class="form-group mt-3">
                 <!-- <input v-model="subject" type="text" class="form-control" name="subject" id="subject"
                   placeholder="Subject" required> -->
                 <h6>Select Subject :</h6>
-                <select class="form-select" aria-label="Default select example" v-model="subject" id="subject" >
+                <select class="form-select" aria-label="Default select example" v-model="subject" id="subject">
                   <!-- <option selected>Select A Subject</option> -->
                   <option v-for="s in profile.subjects" :value="s">{{s}}</option>
                 </select>
               </div>
               <div class="form-group mt-3">
-                <h6>Enter Message :</h6>
+
+                <label for="">
+                  <h6>Enter Message :</h6>
+                </label>
                 <textarea v-model="message" class="form-control" name="message" rows="5" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
+                <!-- <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="sent-message">Your message has been sent. Thank you!</div> -->
               </div>
               <div class="text-center">
 

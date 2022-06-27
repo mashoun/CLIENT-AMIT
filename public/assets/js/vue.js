@@ -86,11 +86,11 @@ app.component('product', {
         `
     <section class="products-container" >
         <div v-for="l in plist" :key="l" class="product-box">
-        <img :src="l.url" alt="" class="scale-in-center">
+        <img :src="l.url" :alt="l.title" class="scale-in-center">
         <div class="text-container">
         <div class="text-pot">
             <h4>{{l.title}}</h4>
-            <button type="button" class="modal-btn" data-toggle="modal" :data-target="'#'+l.id">
+            <button :name="l.title" type="button" class="modal-btn" data-toggle="modal" :data-target="'#'+l.id">
             <i class="bi bi-arrows-angle-expand"></i>
 
             </button>
@@ -100,9 +100,9 @@ app.component('product', {
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <img :src="l.url" alt="" class="modal-img">
+                    <img :src="l.url" :alt="l.title" class="modal-img">
                     <h5 class="modal-title" id="exampleModalLongTitle">{{l.title}}</h5>
-                    <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                    <button :name="l.title" type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
                     <i class="bi bi-arrows-angle-contract"></i>
                     </button>
                 </div>
