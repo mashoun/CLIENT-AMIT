@@ -7,7 +7,7 @@
 
   <title>AMIT</title>
   <meta
-    content="Rolling papers manufacturing company that produces high end products with unique and exceptional designs"
+    content="AMIT is a rolling papers manufacturing company that produces high end products with unique and exceptional designs"
     name="description">
   <meta
     content="Rolling papers producer of bleached, unbleached and organic hemp. Packaging uses hot and cold foil, glow in the dark ink, and spot uv,AMIT"
@@ -29,15 +29,7 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -46,7 +38,7 @@
 
 </head>
 
-<body id="appp">
+<body id="appp" onload="window.scrollTo(0, 0)">
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
@@ -55,7 +47,7 @@
       <div class="logo">
         <!-- <h1><a href="index.html">Flexor</a></h1> -->
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="index.html"><img src="assets/img/amit.jpeg" alt="" class="img-fluid"></a>
+        <a href="https://amitsal.com"><img src="assets/img/amit.jpeg" alt="AMIT LOGO" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -66,25 +58,6 @@
           <li><a class="nav-link scrollto " href="#products">Our Products</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
-          <!-- <li><a href="blog.html">Blog</a></li> -->
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
           <li>
             <a href="#contact" class="nav-link scrollto">
               <div class="getstarted">Contact</div>
@@ -98,17 +71,14 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
+  <!-- <section id="hero" class="d-flex flex-column justify-content-center align-items-center"
+    :style="`background: url(${profile.wallpaper1}) center center;`"> -->
+
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center"
-    :style="`background: url(${profile.wallpaper1}) center center;`">
+    style="background: url('assets/img/AMIT\ A1.png') center center;">
     <div class="container" data-aos="fade-in">
       <h1>Welcome to AMIT</h1>
       <h2>{{profile.bio}}</h2>
-
-
-      <!-- <div class="d-flex align-items-center">
-        <i class="bx bxs-right-arrow-alt get-started-icon"></i>
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-      </div> -->
     </div>
     <div v-if="spinner" class="lds-ellipsis">
       <div></div>
@@ -222,13 +192,13 @@
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bx bx-gift"></i></div>
+              <div class="icon"><i class="bi bi-gift"></i></div>
               <h4 class="title">Mission</h4>
               <p class="description">{{profile.mission}}</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bx bx-atom"></i></div>
+              <div class="icon"><i class="bi bi-gem"></i></div>
               <h4 class="title">Vision</h4>
               <p class="description">{{profile.vission}}</p>
             </div>
@@ -305,27 +275,16 @@
         </div>
       </div>
       <div class="card-container">
-
-        <!-- <div v-for="pr in profile.printing" class="card">
-          <img :src="pr.url" style="width:100%;">
-          <div class="card-body">
-            <h3>{{pr.title}}</h3>
-            <p>{{pr.info}}</p>
-          </div>
-        </div> -->
-
         <div v-for="pr in profile.printingMagic" :key="pr" class="product-box">
           <img :src="pr.url" :alt="pr.title">
           <div class="text-container">
             <div class="text-pot">
               <h4>{{pr.title}}</h4>
-              <!-- Button trigger modal -->
               <button :name="pr.title" type="button" class="modal-btn" data-toggle="modal" :data-target="`#${pr.id}`">
                 <i class="bi bi-arrows-angle-expand"></i>
 
               </button>
 
-              <!-- Modal -->
               <div class="modal fade" :id="pr.id" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
@@ -335,18 +294,12 @@
                       <h5 class="modal-title" id="exampleModalLongTitle">{{pr.title}}</h5>
                       <button :name="pr.title" type="button" class="close close-btn" data-dismiss="modal"
                         aria-label="Close">
-                        <!-- <i class="bi bi-arrow-right"></i> -->
                         <i class="bi bi-arrows-angle-contract"></i>
                       </button>
                     </div>
                     <div class="modal-body">
                       <h4>{{pr.info}}</h4>
-                      <!-- <h4>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam iste dolores praesentium labore? Illum corrupti voluptates ea nostrum tempore et nobis quidem nesciunt cum inventore ex, modi placeat perferendis illo!</h4> -->
                     </div>
-                    <!-- <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div> -->
                   </div>
                 </div>
               </div>
@@ -358,7 +311,8 @@
       </div>
 
       </div>
-    </section><!-- End Values Section -->
+    </section>
+    <!-- End Values Section -->
 
 
     <hr>
@@ -380,11 +334,6 @@
       <!-- Control buttons -->
       <div class="btn-control-box" id="btncontrolbox">
         <button name="ALL" @click="getAllProducts" id="btn-all">All</button>
-        <!-- <button @click="tab1 = true; tab3 = false; tab2 = false;tab4 = false;"><i class="bi bi-hash"></i>ALPH</button>
-        <button @click="tab2 = true; tab1 = false; tab3 = false;tab4 = false;"><i class="bi bi-hash"></i>ASH</button>
-        <button @click="tab3 = true; tab2 = false; tab1 = false;tab4 = false;"><i class="bi bi-hash"></i>SOUR</button>
-        <button @click="tab4 = true; tab2 = false; tab1 = false;tab3 = false;"><i class="bi bi-hash"></i>LAZE</button> -->
-
         <button :class="p" v-for="p in profile.tabs" :name="p" :key="p" @click="setCurrentTab(p)"><i
             class="bi bi-hash"></i>{{p}}</button>
       </div>
@@ -392,7 +341,8 @@
       <product :plist="currentList"></product>
 
 
-    </section><!-- End Portfolio Section -->
+    </section>
+    <!-- End Portfolio Section -->
 
 
     <hr>
@@ -441,12 +391,6 @@
             <div class="member">
               <div class="member-img">
                 <img :src="t.url" class="img-fluid" :alt="t.name">
-                <!-- <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
               </div>
               <div class="member-info">
                 <h4>{{t.name}}</h4>
@@ -485,7 +429,7 @@
           <ul>
 
             <li v-for="f in profile.faq" data-aos="fade-up" :data-aos-delay="`${f.index * 100}`">
-              <i class="bx bx-help-circle icon-help"></i>
+              <i class="bi bi-question icon-help"></i>
               <h1 data-bs-toggle="collapse" :data-bs-target="`#${f.id}`" class="collapsed">
                 {{f.question}}
                 <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i>
@@ -501,22 +445,6 @@
 
       </div>
     </section><!-- End F.A.Q Section -->
-
-
-    <!-- ======= Cta Section ======= -->
-    <!-- <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="text-center">
-          <h3>Intrested ?</h3>
-         
-          <p>send us an email of your request below , our team will be in touch the soonest !</p>
-         
-        </div>
-
-      </div>
-    </section> -->
-    <!-- End Cta Section -->
     <hr>
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -533,9 +461,6 @@
             <div></div>
             <div></div>
           </div>
-          <!-- <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
-            quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-            ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
         <div class="row justify-content-center">
@@ -570,20 +495,12 @@
           <div class="col-xl-9 col-lg-12 mt-4">
             <form class="php-email-form">
               <div class="row">
-                <!-- <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div> -->
+
 
               </div>
               <div class="form-group mt-3">
-                <!-- <input v-model="subject" type="text" class="form-control" name="subject" id="subject"
-                  placeholder="Subject" required> -->
                 <h6>Select Subject :</h6>
                 <select class="form-select" aria-label="Default select example" v-model="subject" id="subject">
-                  <!-- <option selected>Select A Subject</option> -->
                   <option v-for="s in profile.subjects" :value="s">{{s}}</option>
                 </select>
               </div>
@@ -595,9 +512,6 @@
                 <textarea v-model="message" class="form-control" name="message" rows="5" required></textarea>
               </div>
               <div class="my-3">
-                <!-- <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div> -->
               </div>
               <div class="text-center">
 
@@ -639,8 +553,6 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#products">Products</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
             </ul>
           </div>
 
@@ -693,6 +605,15 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

@@ -25,9 +25,11 @@ var app = createApp({
             for (let i = 0; i < res.tabs.length; i++) {
                 // console.log(res.products[res.tabs[i]])
                 arr.push(res.products[res.tabs[i]][0])
+                // arr.push(res.products[res.tabs[i]][1])
 
             }
             this.currentList = arr
+            console.log(this.currentList)
         },
         getCurrentList() {
             // var name = this.currentTab

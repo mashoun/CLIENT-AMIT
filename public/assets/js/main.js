@@ -156,9 +156,9 @@
   /**
    * Initiate glightbox 
    */
-  // const glightbox = GLightbox({
-  //   selector: '.glightbox'
-  // });
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
 
   /**
    * Clients Slider
