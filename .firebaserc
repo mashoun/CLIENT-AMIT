@@ -1,0 +1,9 @@
+{
+  "projects": {
+<<<<<<< HEAD
+    "default": "amit-sal"
+=======
+    "default": "icdsite"
+>>>>>>> 1b57c64c111ad7025a5466071415bd4df28f10d0
+  }
+}

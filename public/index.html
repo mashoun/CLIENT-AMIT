@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <title>Amit</title>
+    <meta
+        content="AMIT is a rolling papers manufacturing company that produces high end products with unique and exceptional designs"
+        name="description">
+    <meta
+        content="Rolling papers producer of bleached, unbleached and organic hemp. Packaging uses hot and cold foil, glow in the dark ink, and spot uv,AMIT"
+        name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/amit-icon.jpg" rel="icon">
+    <link href="assets/img/amit-icon.jpg" rel="apple-touch-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- BOOTSTRAP + ICONS  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- SWIPER CSS  -->
+    <link rel="stylesheet" href="assets/swiper/swiper-bundle.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!-- VUE JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
+
+
+
+</head>
+
+<body id="app" class="overflow-x-hidden">
+
+    <!-- spinner -->
+    <div v-if="spinner" class="d-flex flex-column justify-content-center align-items-center spinner w-100 h-100">
+        <img src="assets/img/amit.jpeg" alt="AMIT" class="img-fluid " style="width: 150px;">
+        <!-- <h6 class="text-secondary mt-3">{{company}}</h6> -->
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <header class="d-flex justify-content-between align-items-center shadow com">
+        <!-- BRAND SECTION -->
+        <section class="d-flex p-2 align-items-center">
+            <a href="#"><img class="rounded m-2" :src="profile.logo" :alt="profile.companyName"
+                    style="width: 100px;"></a>
+            <a href="#">
+                <!-- <h1 class="fs-5 m-2">{{company}}</h1> -->
+            </a>
+        </section>
+
+        <!-- NAVBAR SECTION -->
+        <nav class="navbox">
+            <a class="mx-3" href="#home">Home</a>
+            <a class="mx-3" href="#about">About</a>
+            <a class="mx-3" href="#services">Printing Magic</a>
+            <a class="mx-3" href="#media">Our Products</a>
+            <a class="mx-3" href="#team">Team</a>
+            <a class="mx-3" href="#faq">FAQ</a>
+
+            <a class="mx-3 btn btn-primary" href="#contact">Contact</a>
+        </nav>
+        <i class="bi bi-grid-fill m-3 fs-1 menu point text-secondary" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"></i>
+        <!-- <i class="bi bi-three-dots-vertical m-3 fs-1 menu point text-secondary" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasWithBothOptions"></i> -->
+
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel" style="width: 85% !important;">
+
+            <div class="offcanvas-body">
+
+                <center>
+                    <a href="#"><img class=" m-2 " :src="profile.logo" alt="BRAND NAME" width="120"></a>
+                    <!-- <h4 class="text-primary my-3">{{company}}</h4> -->
+
+                    <!-- <h6 class="my-1">{{profile.bio}}</h6> -->
+
+                    <div class="d-flex justify-content-evenly mt-4 fs-4">
+                        <a :href="profile.whatsapp1" class="twitter"><i class="bi bi-whatsapp text-secondary"></i></a>
+                        <a :href="profile.facebook1" class="facebook"><i class="bi bi-facebook text-secondary"></i></a>
+                        <!-- <a href="#" class="instagram"><i class="bi bi-instagram text-secondary"></i></a> -->
+                        <!-- <a href="#" class="google-plus"><i class="bi bi-skype text-secondary"></i></a> -->
+                        <a :href="profile.linkedIn" class="linkedin"><i class="bi bi-linkedin text-secondary"></i></a>
+                    </div>
+                    <hr class="w-75">
+
+                    <!-- TAGS -->
+                    <div class="d-flex justify-content-evenly align-items-center flex-column mb-3">
+
+                        <div class="mb-1 p-2 mx-auto  rounded-pill" data-bs-dismiss="offcanvas"><a href="#home">Home</a>
+                        </div>
+                        <div class="my-1 p-2 mx-auto  rounded-pill" data-bs-dismiss="offcanvas"><a
+                                href="#about">About</a></div>
+                        <div class="my-1 p-2 mx-auto  rounded-pill" data-bs-dismiss="offcanvas"><a
+                                href="#services">Printing Magic</a></div>
+                        <div class="my-1 p-2  mx-auto  rounded-pill" data-bs-dismiss="offcanvas"><a href="#media">Our
+                                Products</a></div>
+                        <div class="my-1 p-2 mx-auto rounded-pill" data-bs-dismiss="offcanvas"><a href="#team">Team</a>
+                        </div>
+                        <div class="my-1 p-2 mx-auto  rounded-pill" data-bs-dismiss="offcanvas"><a href="#faq">FAQ</a>
+                        </div>
+                        <div class="p-2 w-75 btn btn-outline-primary mx-auto" data-bs-dismiss="offcanvas"><a
+                                href="#contact">Contact</a></div>
+
+                    </div>
+
+                    <i class="bi bi-arrow-return-right fs-2 text-secondary" data-bs-dismiss="offcanvas"></i>
+
+
+                </center>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="position-relative" id="home" style="top:40px;">
+        <picture class="">
+            <source media="(max-width:600px)" srcset="assets/img/mobile.jpg" class="img-fluid">
+            <source media="(max-width:1000px)" srcset="assets/img/tablets.jpg" class="img-fluid">
+            <img src="assets/img/largescreen.jpg" class="img-fluid w-100" style="filter: brightness(60%);">
+        </picture>
+        <div class="hero-box position-absolute container start-50 translate-middle ">
+            <h1 class="text-light com fs-1"> <strong>{{profile.heading}}</strong> </h1>
+            <h1 class="text-light mt-4 lh-base com w-75 fs-6"> {{profile.bio}} </h1>
+            <a :href="profile.getStarted" class="btn btn-primary mt-2 px-4 ls-2 com py-2 rounded">Get Started</a>
+        </div>
+
+    </section>
+
+
+    <main class="">
+
+
+        <!-- ======= ABOUT Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-title container">
+                    <h2 class="mb-5" data-aos="fade-right" data-aos-duration="2000">About Us</h2>
+                    <p class="text-center fs-3" data-aos="fade-up" data-aos-duration="2000">Your Global Business
+                        Partners</p>
+                </div>
+
+                <div class="row content com">
+                    <div class="col-lg-6">
+                        <p class="fs-6" data-aos="fade-right" data-aos-duration="2000"> {{profile.about1}} </p>
+
+                        <a href="https://drive.google.com/uc?export=view&id=1GTMBkr2fwHpQ5bvlEJRdr-uYSxp61Hnt"
+                            download="AMIT Catalogue 2022"
+                            class="w-100 btn btn-outline-primary d-flex align-items-center justify-content-center"><i
+                                class="bi bi-filetype-pdf fs-4 mx-3"></i>Explore our Packaging</a>
+
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-duration="1500">
+                        <!-- <p></p> -->
+                        <ul>
+                            <li class="d-flex justify-content-start align-items-center"><i
+                                    class="bi bi-check2-all me-3 fs-4"></i><span> <strong>SERVICES :</strong>
+                                    {{profile.about2}}</span>
+                            </li>
+                            <li class="d-flex justify-content-start align-items-center">
+                                <i class="bi bi-gift me-3 fs-4"></i>
+                                <span> <strong>MISSION :</strong> {{profile.mission}}</span>
+                            </li>
+                            <li class="d-flex justify-content-start align-items-center"><i
+                                    class="bi bi-gem me-3 fs-4"></i> <span> <strong>VISION :</strong>
+                                    {{profile.vision}}</span>
+                            </li>
+                            <!-- </ul>
+                        <a :href="profile.learnMore" class="btn btn-outline-primary px-3 my-2 learn-more">Learn more</a>
+                        <a :href="profile.video" class="btn btn-outline-secondary px-3 ms-md-3 learn-more"><i
+                                class="bi bi-play-circle me-1"></i> Watch a video</a> -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ======= Counts Section ======= -->
+            <section id="counts" class="counts section-bg">
+                <div class="container">
+
+                    <div class="row d-flex justify-content-around">
+
+                        <div class="col-lg-3 col-md-6 mt-5 mt-md-0" data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="50">
+                            <div class="count-box shadow-sm">
+                                <i class="bi bi-hourglass"></i>
+                                <div class="purecounter-pot">
+                                    <span data-purecounter-start="0" :data-purecounter-end="profile.counter1"
+                                        data-purecounter-duration="2" class="purecounter"></span>
+                                    <!-- <span> K +</span> -->
+                                </div>
+                                <p class="text-secondary com">Operating since</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mt-5 mt-md-0" data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="500">
+                            <div class="count-box shadow-sm">
+                                <i class="bi bi-globe2"></i>
+                                <div class="purecounter-pot">
+                                    <span data-purecounter-start="0" :data-purecounter-end="profile.counter2"
+                                        data-purecounter-duration="2" class="purecounter"></span>
+                                    <span>+</span>
+                                </div>
+                                <p class="text-secondary com">Countries</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mt-5 mt-md-0" data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="800">
+                            <div class="count-box shadow-sm">
+                                <i class="bi bi-boxes"></i>
+                                <div class="purecounter-pot">
+                                    <span data-purecounter-start="0" :data-purecounter-end="profile.counter3"
+                                        data-purecounter-duration="2" class="purecounter"></span>
+                                    <span> K +</span>
+                                </div>
+                                <p class="text-secondary com">Boxes per year</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+            <hr>
+            <!-- ======= WHY choose us Section ======= -->
+            <section class="container" id="whychooseamit">
+
+                <div class="section-title container">
+                    <!-- <h2 class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2> -->
+                    <p class="text-center fs-3" data-aos="fade-left" data-aos-duration="1500">Why Choose Us ?</p>
+                    <h6 class="com mt-5 text-secondary text-center lh-base" data-aos="fade-up" data-aos-duration="1500">
+                        Known by our customers for our work ethic,
+                        professionalism and innovative approach, we strive to
+                        achieve excellence. By emphasizing our product quality and employing fast, efficient service, we
+                        are
+                        able to give you the best product possible at an affordable price.
+                    </h6>
+
+                </div>
+                <div class="d-flex justify-content-evenly align-items-center flex-wrap">
+                    <div class="w-300px d-flex align-items-center flex-column px-3 py-5 my-3 shadow rounded"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+                        <i class="bi bi-award fs-1 text-danger"></i>
+                        <h5 class="my-3">Professionalism</h5>
+                        <p class="text-secondary text-center com">A guiding principle in all our work</p>
+                    </div>
+                    <div class="w-300px d-flex align-items-center flex-column px-3 py-5  my-3 shadow rounded"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="650">
+                        <i class="bi bi-person-check fs-1 text-danger"></i>
+                        <h5 class="my-3">Customer Satisfaction</h5>
+                        <p class="text-secondary text-center com">Satisfaction and loyalty are the most important
+                            elements of a good business</p>
+                    </div>
+                    <div class="w-300px d-flex align-items-center flex-column px-3 py-5  my-3 shadow rounded"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1050">
+                        <i class="bi bi-stars fs-1 text-danger"></i>
+                        <h5 class="my-3">Innovation</h5>
+                        <p class="text-secondary text-center com">Fast changing enviroment requires new ways of thinking
+                            , new skills and attidutes</p>
+                    </div>
+                </div>
+                <!-- <center>
+                <a class="btn btn-primary px-5 my-3 ls-2" href="">Explore</a>
+            </center> -->
+
+            </section>
+            <hr>
+            <!-- ======= Clients Section ======= -->
+            <section id="clients" class="container">
+
+                <div class="section-title container my-4">
+                    <!-- <h2 class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, sequi?</h2> -->
+                    <p class="text-center fs-3" data-aos="fade-up" data-aos-duration="2000">Our Partners and Clients</p>
+                </div>
+                <swiper w="100%" h="auto" :list="profile.clients">
+                </swiper>
+            </section>
+
+        </section>
+
+        <!-- ======= SERVICES Section ======= -->
+        <section id="services">
+            <div class="section-title container">
+                <!-- <h2 class="mb-5"></h2>
+                <p class="text-center fs-3">Printing Magic</p>
+            </div> -->
+
+                <div class="section-title container">
+                    <!-- <h2 class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2> -->
+                    <p class="text-center fs-3" data-aos="fade-right" data-aos-duration="2000">Printing Magic</p>
+                    <h6 class="com mt-5 text-secondary text-center lh-base" data-aos="fade-up" data-aos-duration="2000">
+                        Our biggest edge over the competition is
+                        top-quality packaging which we deliver through
+                        different high end printing techniques found below. Glow in the dark, hot and cold foil, and
+                        many
+                        other techniques allow us to deploy a highly demanded product by the end user due to its
+                        durability
+                        and appealing design.
+                    </h6>
+                </div>
+                <div class="services-box container d-flex justify-content-around align-items-center flex-wrap">
+                    <card v-for="s in profile.services" width="400" :url="s.url" :imgAlt="s.title" :title="s.title"
+                        :info="s.description" :id="s.id">
+                    </card>
+
+                </div>
+
+        </section>
+
+
+
+
+        <!-- <hr> -->
+
+        <!-- ======= MEDIA Section ======= -->
+        <section id="media" class="">
+            <div class="section-title container">
+                <h2 class="mb-5" data-aos="fade-up" data-aos-duration="2000">Our Products</h2>
+                <p class="text-center fs-3" data-aos="fade-up" data-aos-duration="2000">Driven By Excellence</p>
+            </div>
+            <!-- FILTERS -->
+            <section class="media-filters mx-auto container d-flex justify-content-evenly align-items-center flex-wrap">
+                <!-- <button class="media-pot rounded-pill p-2 px-4 m-2 shadow-sm bg-light text-secondary"
+                    @click="getAllMedia">ALL</button> -->
+
+                <button class="btn btn-outline-primary px-4 m-2  rounded-pill" @click="getAllMedia">ALL</button>
+                <button class="btn btn-outline-primary px-4 m-2 rounded-pill" v-for="t in profile.tabs" :key="t"
+                    @click="setCurrentTab(t)">{{t}}</button>
+            </section>
+            <!-- MEDIA BOX -->
+            <section class="d-flex justify-content-evenly align-items-center flex-wrap container">
+
+                <div v-for="cl in currentList" :key="cl">
+                    <card width="300" :url="cl.url" :imgAlt="cl.title" :title="cl.title" :info="cl.description"
+                        :id="cl.id">
+                    </card>
+                </div>
+            </section>
+        </section>
+
+        <!-- ======= TEAM Section ======= -->
+        <section id="team">
+
+            <div class="section-title container">
+                <h2 class="lh-lg mb-5" data-aos="fade-right" data-aos-duration="2000">Driven by the power of youth, our
+                    company is managed by a highly skilled group of
+                    young entrepreneurs who aim to step on the global stage of the industry</h2>
+                <p class="text-center fs-3" data-aos="fade-up" data-aos-duration="2000">Our Team</p>
+            </div>
+            <!-- team box -->
+
+            <div class="swiper-cube mx-auto" style="width: 250px;">
+                <div class="swiper-wrapper">
+                    <div v-for="t in profile.team" class="swiper-slide"><img :src="t.url" alt=""
+                            class="img-fluid rounded"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+        <hr>
+        <!-- ======= Quality Section ======= -->
+
+        <section class="quality-box container" id="quality">
+
+            <!-- <div class="section-title container">
+                <h2 class="lh-lg mb-5">AMIT would never compromise on product quality, especially when it’s related to
+                    the
+                    customer’s rolling experience. Our products follow international rules and regulations for rolling
+                    papers,
+                    where we ensure the user’s safety and the products sustainability.</h2>
+                <p class="text-center fs-3">Quality</p>
+            </div> -->
+
+            <div class="section-title container">
+                <!-- <h2 class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2> -->
+                <p class="text-center fs-3" data-aos="fade-up" data-aos-duration="2000">Quality</p>
+                <h6 class="com mt-5 text-secondary text-center lh-base" data-aos="fade-right" data-aos-duration="2000">
+                    AMIT would never compromise on product quality,
+                    especially when it’s related to
+                    the
+                    customer’s rolling experience. Our products follow international rules and regulations for rolling
+                    papers,
+                    where we ensure the user’s safety and the products sustainability.
+                </h6>
+            </div>
+
+            <div v-for="q in profile.quality" class="quality-card shadow-sm">
+                <div class="quality-pot"><img :src="q.url" :alt="q.name"></div>
+
+                <h6 class="text-secondary text-center">{{q.name}}</h6>
+            </div>
+
+
+
+        </section>
+
+        <!-- ======= FAQ Section ======= -->
+        <section id="faq">
+
+            <div class="section-title container">
+                <h2 class="lh-lg mb-5" data-aos="fade-right" data-aos-duration="2000">We’re here to answer any question
+                    you might have. If the questions below are not
+                    what
+                    you’re looking for, scroll down and send us an email.</h2>
+                <p class="text-center fs-3" data-aos="fade-up" data-aos-duration="2000">F A Q</p>
+            </div>
+
+            <!-- FAQ BOX -->
+            <div class="accordion accordion-flush container" id="accordionExample">
+
+                <faq v-for="f in profile.faq" :question="f.question" :index="f.id"> {{f.answer}} </faq>
+
+            </div>
+        </section>
+
+        <!-- ======= CONTACT Section ======= -->
+        <section id="contact" class="contact section-bg">
+            <div class="container">
+
+                <div class="section-title container" data-aos="fade-up" data-aos-duration="2000">
+                    <h2 class="lh-lg">Contact us with an email of your request below , our team will be in touch the
+                        soonest !</h2>
+                    <p class="text-center fs-3 mt-3" data-aos="fade-left" data-aos-duration="2000">Intrested ?</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-6">
+
+                        <div class="row">
+                            <div class="col-md-12" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="info-box rounded">
+                                    <i class="bi bi-map text-primary fs-4"></i>
+                                    <h3>Our Address</h3>
+                                    <p class="com">{{profile.address1}} <br> {{profile.address2}} </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="info-box mt-4 rounded">
+                                    <i class="bi bi-envelope text-primary fs-4"></i>
+                                    <h3>Email Us</h3>
+                                    <p class="com"> {{profile.email1}} <br> {{profile.email2}} </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-box mt-4 rounded" data-aos="fade-up" data-aos-duration="1000">
+                                    <i class="bi bi-phone text-primary fs-4"></i>
+                                    <h3>Call Us</h3>
+                                    <p class="com"> {{profile.number1}} <br> {{profile.number2}} </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 rounded">
+                        <form class="php-email-form rounded" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="row">
+                                <div class="col-md-6 form-group rounded">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="Your Name" required v-model="username">
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0 rounded">
+                                    <input type="email" class="form-control" name="email" id="useremail"
+                                        placeholder="Your Email" required v-model="useremail">
+                                </div>
+                            </div>
+                            <div class="form-group mt-3 rounded">
+                                <!-- <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Subject" required v-model="subject"> -->
+
+                                <h6 class="text-secondary ms-2">Select Subject :</h6>
+                                <select class="form-select" aria-label="Default select example" v-model="subject"
+                                    id="subject">
+                                    <option v-for="s in profile.subjects" :value="s.name">{{s.name}}</option>
+                                </select>
+                            </div>
+                            <div class="form-group mt-3 rounded">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message" required
+                                    v-model="message"></textarea>
+                            </div>
+
+                            <div class="text-center rounded">
+
+                                <a class="send-msg btn btn-primary mt-3"
+                                    :href="`mailto:${profile.email1}?subject=${encode(subject)}&body=${encode(''+username+' | '+useremail+'\n\n\n'+message)}`">Send
+                                    Message</a>
+
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info shadow-sm">
+                            <h3 class="text-uppercase">{{company}}</h3>
+                            <p class="pb-3 com"><em> {{profile.bio}} </em>
+                            </p>
+                            <!-- <p> {{profile.address1}} <br> {{profile.address2}} <br><br>
+                                <strong>Phone:</strong> {{profile.number1}} <br>
+                                <strong>Email:</strong> {{profile.email1}} <br>
+                            </p> -->
+                            <!-- <a href="#" class="btn btn-outline-primary px-5">Get Started</a> -->
+                            <a href="https://drive.google.com/uc?export=view&id=1GTMBkr2fwHpQ5bvlEJRdr-uYSxp61Hnt"
+                                download="AMIT Catalogue 2022"
+                                class="w-100 btn btn-outline-primary d-flex align-items-center justify-content-center"><i
+                                    class="bi bi-filetype-pdf fs-4 mx-3"></i>Explore our Packaging</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4 class="text-dark fs-5">Useful Links</h4>
+                        <ul>
+                            <li class="text-secondary fs-6"><i class="bi bi-chevron-right fs-6 me-1"></i> <a
+                                    href="#">Home</a></li>
+                            <li class="text-secondary fs-6"><i class="bi bi-chevron-right fs-6 me-1"></i> <a
+                                    href="#about">About</a></li>
+                            <li class="text-secondary fs-6"><i class="bi bi-chevron-right fs-6 me-1"></i> <a
+                                    href="#quality">Quality</a></li>
+                            <li class="text-secondary fs-6"><i class="bi bi-chevron-right fs-6 me-1"></i> <a
+                                    href="#whychooseamit">Why Choose AMIT</a></li>
+                            <!-- <li class="text-secondary fs-6"><i class="bi bi-chevron-right fs-6 me-1"></i> <a
+                                    href="#">Privacy Policy</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4 class="text-dark fs-5">Check Also</h4>
+                        <ul>
+                            <li class="text-secondary fs-6"><i class="bi bi-chevron-right fs-6 me-1"></i> <a
+                                    href="#faq">F A Q</a></li>
+                            <li class="text-secondary fs-6"><i class="bi bi-chevron-right fs-6 me-1"></i> <a
+                                    href="#services">Printing Magic</a></li>
+                            <li class="text-secondary fs-6"><i class="bi bi-chevron-right fs-6 me-1"></i> <a
+                                    href="#media">Our Products</a></li>
+                            <li class="text-secondary fs-6"><i class="bi bi-chevron-right fs-6 me-1"></i> <a
+                                    href="#clients">Partners & Clients</a></li>
+                            <!-- <li class="text-secondary fs-6"><i class="bi bi-chevron-right fs-6 me-1"></i> <a
+                                    href="#about">Learn More</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4 class="text-dark fs-5">Our Newsletter</h4>
+                        <p class="com">Subscribe below so we can update you on our latest activities.</p>
+
+                        <div class="input-group mb-3">
+                            <input v-model="newsletter" type="text" class="form-control py-2"
+                                placeholder="Enter your email">
+                            <button class="btn btn-danger" type="button" id="button-addon2"
+                                @click="subscribe">Subscribe</button>
+                        </div>
+
+                        <div class="mt-4 d-flex justify-content-evenly ">
+                            <a data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000" :href="profile.whatsapp1"
+                                class="twitter"><i class="bi bi-whatsapp text-secondary fs-4"></i></a>
+                            <a data-aos="fade-up" data-aos-delay="550" data-aos-duration="1000"
+                                :href="profile.facebook1" class="facebook"><i
+                                    class="bi bi-facebook text-secondary fs-4"></i></a>
+                            <a data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000"
+                                :href="profile.linkedIn" class="linkedin"><i
+                                    class="bi bi-linkedin text-secondary fs-4"></i></a>
+                            <!-- <a data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" href="#"
+                                class="instagram"><i class="bi bi-instagram text-secondary fs-4"></i></a> -->
+                            <!-- <a data-aos="fade-up" data-aos-delay="1550" data-aos-duration="1000"  href="#" class="google-plus"><i class="bi bi-skype text-secondary fs-4"></i></a> -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <hr>
+            <h6 class="text-center text-secondary"><a href="https://lebancode.com" class="lebancode ls-2 com">Powered by
+                    Lebancode.com</a></h6>
+        </div>
+
+    </footer>
+
+    <script src="assets/js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+    <script src="assets/purecounter/purecounter.js"></script>
+    <script src="assets/swiper/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init()
+    </script>
+
+</body>
+
+</html>

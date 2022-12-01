@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Viewer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        .point {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body id="app">
+    <h2 class="text-primary text-center my-3">Image Viewer</h2>
+    <h6 class="text-center text-secondary my-4">select a cell then click on an image</h6>
+    <hr class="w-75 my-3 mx-auto">
+
+    <center class="my-5" v-if="spinner">
+        <div class="spinner-border text-secondary" role="status"></div>
+    </center>
+
+    <section class="container d-flex justify-content-evenly flex-wrap">
+        <img v-for="i in images" @click="paste(i)" :src="i" class="img-fluid shadow rounded m-3 point"
+            style="width:100px;">
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    spinner: false,
+                    images: []
+                }
+            },
+            methods: {
+                paste(link) {
+                    google.script.run.pasteCell(link)
+                }
+            },
+            mounted() {
+                this.spinner = true
+                google.script.run.withSuccessHandler(res => {
+                    this.images = res
+                    this.spinner = false
+                }).getImagesFromDrive()
+            }
+        })
+        app.mount('#app')
+
+    </script>
+</body>
+
+</html>
